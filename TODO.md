@@ -1,0 +1,26 @@
+# Features
+- [x] Variable canvas size
+- [x] Layers support transparency
+- [ ] Layers support having child layers
+- [x] Export to png or jpg
+- [ ] Render image
+  - [ ] fitting: center crop, fit width, fit height, full size
+  - [ ] fit offsett: left, right, up, down
+  - [ ] Render smaller image wherever you want
+  - [ ] Scale image 
+  - [ ] Render image by providing URL
+- [ ] Render text
+  - [ ] Choose font
+  - [ ] Font weight (100 - 900, lighter, normal, bold, bolder)
+  - [ ] Font alignment (left, center, right)
+  - [ ] Font size
+  - [ ] Color
+- [ ] Render shape (this is support for borders)
+  - [ ] Rectangle
+  - [ ] Circle
+  - [ ] Inverted circle
+  - [ ] width
+  - [ ] color
+- [ ] Effects
+  - [ ] Blur
+
