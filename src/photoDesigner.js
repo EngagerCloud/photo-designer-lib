@@ -21,11 +21,13 @@ module.exports = function(config = null) {
 		}
 
 		_init: function(config){
-			if(config === null){
-				photoDesigner._setConfig(photoDesigner._defaultConfig);
-			}
+			return new Promise(function(){
+				if(config === null){
+					photoDesigner._setConfig(photoDesigner._defaultConfig);
+				}
 
-			return photoDesigner;
+				resolve(photoDesigner);
+			})
 		}
 	}
 
