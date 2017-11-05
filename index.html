@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Example enviroment</title>
+	</head>
+	<body>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.19/system.js"></script>
+		<script>
+			System.config({
+			packages: {
+				'.': {
+				defaultExtension: 'js'
+				}
+			}
+			});
+
+			SystemJS.import('./example.js');
+		</script>
+	</body>
+</html>

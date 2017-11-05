@@ -1,4 +1,4 @@
-const newCanvas = require("./newCanvas");
+const newCanvas = require("./newCanvas.js");
 const exportCanvas = require("./exportCanvas");
 
 module.exports = function(config = null) {
