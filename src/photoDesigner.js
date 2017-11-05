@@ -1,4 +1,5 @@
 const newCanvas = require("./newCanvas");
+const exportCanvas = require("./newCanvas");
 
 module.exports = function(config = null) {
 	let photoDesigner = {
@@ -28,14 +29,42 @@ module.exports = function(config = null) {
 
 		_canvas: undefined,
 
+		_setCanvas: function(canvas){
+			photoDesigner._canvas = canvas;
+		}
+
+		getCanvas: function(){
+			return photoDesigner._canvas;
+		}
+
 		_init: function(config){
 			if(config === null){
 				photoDesigner._setConfig(photoDesigner._defaultConfig);
 			}
 
-			photoDesigner._canvas = newCanvas();
+			photoDesigner._setCanvas(newCanvas());
 
 			return photoDesigner;
+		},
+
+		// Layer management and rendering
+		
+		_render: function(){
+			// Render layers to canvas
+
+			return new Promise(function(resolve, reject){
+				resolve();
+			});
+		}
+
+		render: function(){
+			return new Promise(function(resolve, reject){
+				photoDesigner._render().then(function(){
+					exportCanvas(photoDesigner._canvas).then(function(url){
+						resolve(url);
+					});
+				})
+			});
 		}
 	}
 
