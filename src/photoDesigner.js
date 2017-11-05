@@ -1,5 +1,9 @@
+const newCanvas = require("./newCanvas");
+
 module.exports = function(config = null) {
 	let photoDesigner = {
+		// Config stuff
+
 		_config: undefined,
 
 		_defaultConfig: {
@@ -20,14 +24,18 @@ module.exports = function(config = null) {
 			photoDesigner._config = config;
 		}
 
-		_init: function(config){
-			return new Promise(function(){
-				if(config === null){
-					photoDesigner._setConfig(photoDesigner._defaultConfig);
-				}
+		// Constructor and canvas stuff
 
-				resolve(photoDesigner);
-			})
+		_canvas: undefined,
+
+		_init: function(config){
+			if(config === null){
+				photoDesigner._setConfig(photoDesigner._defaultConfig);
+			}
+
+			photoDesigner._canvas = newCanvas();
+
+			return photoDesigner;
 		}
 	}
 
