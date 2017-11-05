@@ -40,9 +40,11 @@ module.exports = function(config = null) {
 		_init: function(config){
 			if(config === null){
 				photoDesigner._setConfig(photoDesigner._defaultConfig);
+			} else {
+				photoDesigner._setConfig(config);
 			}
 
-			photoDesigner._setCanvas(newCanvas());
+			photoDesigner._setCanvas(newCanvas(photoDesigner._config.root.width, photoDesigner._config.root.height));
 
 			return photoDesigner;
 		},
@@ -57,10 +59,10 @@ module.exports = function(config = null) {
 			});
 		},
 
-		render: function(){
+		render: function(format, quality){
 			return new Promise(function(resolve, reject){
 				photoDesigner._render().then(function(){
-					exportCanvas(photoDesigner._canvas).then(function(url){
+					exportCanvas(photoDesigner._canvas, format, quality).then(function(url){
 						resolve(url);
 					});
 				})
