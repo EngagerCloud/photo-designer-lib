@@ -1,0 +1,10 @@
+{
+  "name": "photo-designer-lib",
+  "version": "0.0.0",
+  "description": "PhotoDesigner library",
+  "main": "index.js",
+  "repository": "git@github.com:EngagerCloud/photo-designer-lib.git",
+  "author": "nemanjan00",
+  "license": "MIT",
+  "private": false
+}
