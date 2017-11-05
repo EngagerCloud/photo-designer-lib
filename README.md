@@ -1,5 +1,7 @@
 # photo-designer-lib
-Library for rendering marketing images. 
+
+
+Library for designing marketing images. 
 
 It can work in browser or on server. 
 
