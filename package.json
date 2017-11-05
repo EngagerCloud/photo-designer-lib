@@ -6,5 +6,12 @@
   "repository": "git@github.com:EngagerCloud/photo-designer-lib.git",
   "author": "nemanjan00",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "install": "^0.10.1",
+    "npm": "^5.5.1"
+  },
+  "devDependencies": {
+    "canvas": "^2.0.0-alpha.5"
+  }
 }

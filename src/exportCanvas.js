@@ -1,13 +1,13 @@
 const isBrowser = require("./helpers/isBrowser");
 
 module.exports = function(canvas, format = "image/jpeg", quality = 90){
-	const exportCanvas = {
+	return new Promise(function(resolve, reject){
 		let src = undefined;
 
 		if(!isBrowser){
 			let urlHandler = function(err, image){
-				if(error){
-					reject(error);
+				if(err){
+					reject(err);
 				} else {
 					resolve(image);
 				}
@@ -27,6 +27,6 @@ module.exports = function(canvas, format = "image/jpeg", quality = 90){
 			
 			resolve(src);
 		}
-	}
+	})
 }
 

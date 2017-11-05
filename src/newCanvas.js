@@ -1,17 +1,12 @@
 const isBrowser = require("./helpers/isBrowser");
 
-if(!isBrowser){
-	const canvas = require("canvas");
-
-	const createCanvas = canvas.createCanvas;
-	const loadImage = canvas.loadImage;
-}
-
 module.exports = function(width, height){
 	let canvas = undefined;
 
 	if(!isBrowser){
-		canvas createCanvas(200, 200)
+		const { createCanvas, loadImage } = require('canvas')
+
+		canvas = createCanvas(width, height)
 	} else {
 		canvas = document.createElement("canvas");
 		

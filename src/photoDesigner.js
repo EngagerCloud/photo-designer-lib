@@ -1,5 +1,5 @@
 const newCanvas = require("./newCanvas");
-const exportCanvas = require("./newCanvas");
+const exportCanvas = require("./exportCanvas");
 
 module.exports = function(config = null) {
 	let photoDesigner = {
@@ -23,7 +23,7 @@ module.exports = function(config = null) {
 			// TODO config validator
 			
 			photoDesigner._config = config;
-		}
+		},
 
 		// Constructor and canvas stuff
 
@@ -31,11 +31,11 @@ module.exports = function(config = null) {
 
 		_setCanvas: function(canvas){
 			photoDesigner._canvas = canvas;
-		}
+		},
 
 		getCanvas: function(){
 			return photoDesigner._canvas;
-		}
+		},
 
 		_init: function(config){
 			if(config === null){
@@ -55,7 +55,7 @@ module.exports = function(config = null) {
 			return new Promise(function(resolve, reject){
 				resolve();
 			});
-		}
+		},
 
 		render: function(){
 			return new Promise(function(resolve, reject){
