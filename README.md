@@ -48,8 +48,6 @@ Module can be for example text, image, stock image, blur...
 
 You as user of this library can use modules we provided or write your own modules. 
 
-Custom modules helped us solve problems 1 & 3. 
-
 #### Rendering images
 
 What you need to render image is library configuration. 
