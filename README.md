@@ -9,6 +9,20 @@ It can work in browser or on server.
 
 ## Usage
 
+### Installation
+
+```bash
+npm install photo-designer-lib
+```
+
+### Using on server
+
+For usage on server, you will also have to install [canvas](https://github.com/Automattic/node-canvas). 
+
+```bash
+npm install canvas --save
+```
+
 ### Using with Webpack
 
 If you want to use it with webpack, you need to make it ignore ``canvas`` module. 
