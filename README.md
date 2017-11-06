@@ -3,8 +3,6 @@
 
 Library for designing marketing images. 
 
-It can work in browser or on server. 
-
 ## Table of contents
 
 <!-- vim-markdown-toc GFM -->
