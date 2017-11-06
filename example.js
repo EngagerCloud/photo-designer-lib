@@ -1,4 +1,4 @@
-const photoDesigner = require("./src/photoDesigner");
+const photoDesigner = require("./src/lib/photoDesigner");
 
 const designer = photoDesigner({
 	root: {

@@ -1,4 +1,4 @@
-const isBrowser = require("./helpers/isBrowser");
+const isBrowser = require("./isBrowser");
 
 module.exports = function(canvas, format = "image/jpeg", quality = 90){
 	return new Promise(function(resolve, reject){

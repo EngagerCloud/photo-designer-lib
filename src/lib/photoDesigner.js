@@ -1,5 +1,11 @@
-const newCanvas = require("./newCanvas.js");
-const exportCanvas = require("./exportCanvas");
+// Helpers for Canvas
+
+const newCanvas = require("../helpers/newCanvas.js");
+const exportCanvas = require("../helpers/exportCanvas");
+
+// Singelton for registering modules
+
+const moduleManager = require("./moduleManager");
 
 module.exports = function(config = null) {
 	let photoDesigner = {

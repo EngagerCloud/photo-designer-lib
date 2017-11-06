@@ -1,4 +1,4 @@
-const isBrowser = require("./helpers/isBrowser");
+const isBrowser = require("./isBrowser");
 
 module.exports = function(width, height){
 	let canvas = undefined;
