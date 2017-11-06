@@ -7,6 +7,30 @@ It can work in browser or on server.
 
 **Note: For usage on server, install [node-canvas](https://github.com/Automattic/node-canvas)**
 
+## Using with Webpack
+
+If you want to use it with webpack, you need to make it ignore ``canvas`` module. 
+
+```javascript
+module.exports = {
+	node: {
+		canvas: 'empty'
+	}
+};
+```
+
+## Using with SystemJS
+
+If you want to use it with SystemJS, you need to make it ignore ``canvas`` module. 
+
+```javascript
+System.config({
+	map: {
+		'canvas': '@empty'
+	}
+});
+```
+
 ## Testing
 
 ### Browser
