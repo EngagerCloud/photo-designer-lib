@@ -28,7 +28,7 @@ Library for designing marketing images.
 
 There were 3 main problems we encountered when we started developing software for creating marketing material. 
 
- * We can not have dynamic image content (first version we developed worked only on frontend and we could not change anything on backend)
+ * We can not have dynamic image content (first version we developed rendered images only on frontend and we could not change anything on backend)
 
  * We simply lacked power to extend it simply (for example, if we wanted to add ability to add blur, we had to change a lot of code)
 
