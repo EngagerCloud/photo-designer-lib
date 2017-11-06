@@ -7,6 +7,10 @@ const exportCanvas = require("../helpers/exportCanvas");
 
 const moduleManager = require("./moduleManager");
 
+// Built in modules
+
+require("../modules");
+
 module.exports = function(config = null) {
 	let photoDesigner = {
 		// Config stuff
