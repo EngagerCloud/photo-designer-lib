@@ -5,6 +5,23 @@ Library for designing marketing images.
 
 It can work in browser or on server. 
 
+## Table of contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [Usage](#usage)
+	* [Installation](#installation)
+	* [Using on server](#using-on-server)
+	* [Using with Webpack](#using-with-webpack)
+	* [Using with SystemJS](#using-with-systemjs)
+* [Development](#development)
+	* [Testing](#testing)
+		* [Browser](#browser)
+		* [Server](#server)
+* [Authors](#authors)
+
+<!-- vim-markdown-toc -->
+
 ## Usage
 
 ### Installation
