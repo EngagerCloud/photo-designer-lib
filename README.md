@@ -2,7 +2,7 @@
 
 Library for designing marketing images. 
 
-**This library is still under heavy develpment and lacks documentation. We do not recommend you to use it yet. We just reserved this package name. **
+**This library is still under heavy develpment and lacks documentation. We do not recommend you to use it yet. We just reserved this package name.**
 
 ## Table of contents
 
