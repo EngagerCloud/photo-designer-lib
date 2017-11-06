@@ -9,8 +9,8 @@ It can work in browser or on server.
 
 <!-- vim-markdown-toc GFM -->
 
+* [Installation](#installation)
 * [Usage](#usage)
-	* [Installation](#installation)
 	* [Using on server](#using-on-server)
 	* [Using with Webpack](#using-with-webpack)
 	* [Using with SystemJS](#using-with-systemjs)
@@ -22,13 +22,13 @@ It can work in browser or on server.
 
 <!-- vim-markdown-toc -->
 
-## Usage
-
-### Installation
+## Installation
 
 ```bash
 npm install photo-designer-lib
 ```
+
+## Usage
 
 ### Using on server
 
