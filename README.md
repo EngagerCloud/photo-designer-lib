@@ -7,7 +7,9 @@ It can work in browser or on server.
 
 **Note: For usage on server, install [node-canvas](https://github.com/Automattic/node-canvas)**
 
-## Using with Webpack
+## Usage
+
+### Using with Webpack
 
 If you want to use it with webpack, you need to make it ignore ``canvas`` module. 
 
@@ -19,7 +21,7 @@ module.exports = {
 };
 ```
 
-## Using with SystemJS
+### Using with SystemJS
 
 If you want to use it with SystemJS, you need to make it ignore ``canvas`` module. 
 
@@ -31,15 +33,17 @@ System.config({
 });
 ```
 
-## Testing
+## Development
 
-### Browser
+### Testing
+
+#### Browser
 
 ```bash
 npm run serve # and open console in browser
 ```
 
-### Server
+#### Server
 
 ```
 node ./example.js
