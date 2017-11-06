@@ -16,3 +16,5 @@ designer.render("image/png").then(function(url){
 	console.log(url);
 })
 
+console.log(require("./src/lib/moduleManager").getModules());
+

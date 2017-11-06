@@ -12,6 +12,8 @@ Library for designing marketing images.
 	* [How did we solve problems?](#how-did-we-solve-problems)
 		* [Custom modules](#custom-modules)
 		* [Rendering images](#rendering-images)
+		* [Positioning](#positioning)
+		* [Dynamic structure](#dynamic-structure)
 * [Installation](#installation)
 * [Usage](#usage)
 	* [Using on server](#using-on-server)
@@ -54,6 +56,18 @@ What you need to render image is library configuration.
 You can write it yourself or generate it using this library. 
 
 When you have instance of this library configured, you can render image. (Both on frontend and backend)
+
+#### Positioning
+
+One of the biggest problems we encountered with old photo designer was positioning and size of layers. 
+
+With this one you can add children to layer and this will alow you to have one layer move relative to another one. 
+
+#### Dynamic structure
+
+Magic of this library is that module can make changes to whole tree of layers or even generate children. 
+
+For example you can write module that will position text on different places based on background picked. 
 
 ## Installation
 
