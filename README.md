@@ -72,7 +72,7 @@ For example you can write module that will position text on different places bas
 ## Installation
 
 ```bash
-npm install photo-designer-lib
+npm install photodesigner-lib
 ```
 
 ## Usage
