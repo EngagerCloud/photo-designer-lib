@@ -1,4 +1,4 @@
-# photo-designer-lib
+# photodesigner-lib
 
 Library for designing marketing images. 
 
