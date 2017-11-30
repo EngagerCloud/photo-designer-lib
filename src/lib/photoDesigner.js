@@ -63,9 +63,9 @@ module.exports = function(config = null) {
 
 				photoDesigner._setCanvas(newCanvas(photoDesigner._config.root.width, photoDesigner._config.root.height));
 
-				dm(config.root);
-
-				resolve(photoDesigner);
+				dm(config.root).then(function(){
+					resolve(photoDesigner);
+				});
 			});
 		},
 

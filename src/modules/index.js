@@ -3,4 +3,5 @@
 const moduleManager = require("../lib/moduleManager");
 
 moduleManager.addModule(require("./text"));
+moduleManager.addModule(require("./layer"));
 

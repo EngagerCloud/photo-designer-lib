@@ -1,4 +1,4 @@
-const moduleManager = require("../../index").moduleManager;
+const moduleManager = require("./moduleManager");
 
 module.exports = function(config){
 	const dm = {
@@ -10,14 +10,14 @@ module.exports = function(config){
 			return new Promise(function(resolve, reject){
 				dm.config = config;
 
-				config.children = config.children.map(function(child){
+				config.children = (config.children || []).map(function(child){
 					return module.exports(child);
 				});
 
 				Promise.all(config.children).then(function(children){
 					config.children = children;
 
-					moduleManager.getModule(config.name).factory(dm, config).then(function(){
+					moduleManager.getModule(config.type).factory(dm, config).then(function(){
 						resolve(dm);
 					});
 				})
@@ -55,6 +55,6 @@ module.exports = function(config){
 		config: {}
 	}
 
-	return dm._init;
+	return dm._init(config);
 }
 
