@@ -1,8 +1,8 @@
 module.exports = {
 	name: "text",
-	newInstance: function(){
+	factory: function(dm, config){
 		return new Promise(function(resolve, reject){
-			resolve();
+			resolve(dm);
 		});
 	}
 }
