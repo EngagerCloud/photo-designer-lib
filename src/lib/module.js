@@ -1,4 +1,4 @@
-const moduleManager = require("../../").moduleManager;
+const moduleManager = require("../../index").moduleManager;
 
 module.exports = function(config){
 	const dm = {

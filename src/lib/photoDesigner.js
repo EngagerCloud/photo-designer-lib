@@ -9,7 +9,11 @@ const moduleManager = require("./moduleManager");
 
 // Built in modules
 
-require("../modules");
+require("../modules/index");
+
+// Layer initializer
+
+const dm = require("./module");
 
 module.exports = function(config = null) {
 	let photoDesigner = {
@@ -33,6 +37,8 @@ module.exports = function(config = null) {
 			// TODO config validator
 			
 			photoDesigner._config = config;
+
+			
 		},
 
 		// Constructor and canvas stuff
@@ -48,15 +54,19 @@ module.exports = function(config = null) {
 		},
 
 		_init: function(config){
-			if(config === null){
-				photoDesigner._setConfig(photoDesigner._defaultConfig);
-			} else {
-				photoDesigner._setConfig(config);
-			}
+			return new Promise(function(resolve, reject){
+				if(config === null){
+					photoDesigner._setConfig(photoDesigner._defaultConfig);
+				} else {
+					photoDesigner._setConfig(config);
+				}
 
-			photoDesigner._setCanvas(newCanvas(photoDesigner._config.root.width, photoDesigner._config.root.height));
+				photoDesigner._setCanvas(newCanvas(photoDesigner._config.root.width, photoDesigner._config.root.height));
 
-			return photoDesigner;
+				dm(config.root);
+
+				resolve(photoDesigner);
+			});
 		},
 
 		// Layer management and rendering

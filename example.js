@@ -1,6 +1,6 @@
-const photoDesigner = require("./").photoDesigner;
+const photoDesigner = require("./index.js").photoDesigner;
 
-const designer = photoDesigner({
+photoDesigner({
 	root: {
 		type: "layer",
 
@@ -8,13 +8,15 @@ const designer = photoDesigner({
 		y: 0,
 
 		width: 640,
-		height: 640
+		height: 640,
+
+		children: []
 	}
+}).then(function(designer){
+	designer.render("image/png").then(function(url){
+		console.log(url);
+	})
+
+	console.log(require("./src/lib/moduleManager").getModules());
 });
-
-designer.render("image/png").then(function(url){
-	console.log(url);
-})
-
-console.log(require("./src/lib/moduleManager").getModules());
 
